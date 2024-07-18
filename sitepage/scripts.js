@@ -1,7 +1,7 @@
-async function loadMarkdown() {
+async function loadMarkdown(url) {
     try {
         // 获取 Markdown 文件内容
-        const response = await fetch('https://raw.githubusercontent.com/swangnice/test_repo/main/README.md');
+        const response = await fetch(url);
         const markdown = await response.text();
         // 将 Markdown 转换为 HTML
         const html = convertMarkdownToHTML(markdown);
@@ -12,9 +12,6 @@ async function loadMarkdown() {
         document.getElementById('content').innerHTML = '加载内容时出错。';
     }
 }
-
-// 在页面加载时调用 loadMarkdown 函数
-window.onload = loadMarkdown;
 
 // 自定义的 Markdown 转 HTML 转换函数
 function convertMarkdownToHTML(markdown) {

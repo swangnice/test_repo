@@ -12,6 +12,13 @@
 <body>
     <div id="header-container"></div>
     <div id="content">Loading...</div>
+
+    <script>
+        // 在页面加载时调用 loadMarkdown 函数，传入 Markdown 文件的 URL
+        window.onload = () => {
+            loadMarkdown('https://raw.githubusercontent.com/swangnice/test_repo/main/README.md');
+        };
+    </script>
     
 </body>
 </html>
