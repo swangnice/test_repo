@@ -1,7 +1,7 @@
 async function loadMarkdown() {
     try {
         // 获取 Markdown 文件内容
-        const response = await fetch('README.md');
+        const response = await fetch('../README.md');
         const markdown = await response.text();
         // 将 Markdown 转换为 HTML
         const html = convertMarkdownToHTML(markdown);
