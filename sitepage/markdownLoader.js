@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://github.com/swangnice/test_repo/README.md')
+    fetch('https://github.com/Doriandarko/claude-engineer/README.md')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
