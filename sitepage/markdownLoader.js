@@ -16,4 +16,3 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
         });
 });
-
