@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('https://github.com/Doriandarko/claude-engineer/README.md')
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    const url = 'https://raw.githubusercontent.com/DorianDarko/claude-engineer/README.md';  // 这里需要修正为正确的 raw URL
+
+    fetch(proxy + url)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -14,3 +17,4 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById('content').innerHTML = '<p>Error loading content.</p>';
         });
 });
+
